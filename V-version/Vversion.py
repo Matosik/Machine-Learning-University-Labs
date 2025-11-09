@@ -5,8 +5,8 @@ from Lab_2 import (boundary_of_bayes_classifier_for_N_with_same_B, boundary_of_b
                          get_erroneous_classification_probabilities, experimental_probability_error)
 
 
-M_0 = np.array([0, 1])
-M_1 = np.array([-1, -1])
+M_0 = np.array([0, 0])
+M_1 = np.array([-1, 1])
 
 B_0 = np.array([[0.35, 0.15], [0.15, 0.35]])  # Для одинаковых
 
@@ -52,8 +52,8 @@ def get_errors(sample_1, sample_2, W_POPOL):
 
 
 def show_all_borders(borders):
-    sample_1 = np.load("Files/arrayX2_1.npy")
-    sample_2 = np.load("Files/arrayX2_2.npy")
+    sample_1 = np.load("data/X2_equal.npy")
+    sample_2 = np.load("data/X2_equal.npy")
     sample_1 = np.transpose(sample_1)
     sample_2 = np.transpose(sample_2)
 
@@ -67,8 +67,8 @@ def show_all_borders(borders):
 
 
 def show_all_borders_three(borders):
-    sample_1 = np.load("Files/arrayX2_1.npy")
-    sample_2 = np.load("Files/arrayX2_2.npy")
+    sample_1 = np.load("data/arrayX2_1.npy")
+    sample_2 = np.load("data/arrayX2_2.npy")
     sample_1 = np.transpose(sample_1)
     sample_2 = np.transpose(sample_2)
 
@@ -83,8 +83,8 @@ def show_all_borders_three(borders):
 
 
 def task_1_same_B():
-    sample_1 = np.transpose(np.load("Files/arrayX2_1.npy"))
-    sample_2 = np.transpose(np.load("Files/arrayX2_2.npy"))
+    sample_1 = np.transpose(np.load("data/arrayX2_1.npy"))
+    sample_2 = np.transpose(np.load("data/arrayX2_2.npy"))
 
     M_dif = M_1 - M_0
     M_sum = M_1 + M_0
@@ -108,8 +108,8 @@ def task_1_same_B():
 
 
 def task_1_different_B():
-    sample_3 = np.transpose(np.load("Files/arrayX3_1.npy"))
-    sample_4 = np.transpose(np.load("Files/arrayX3_2.npy"))
+    sample_3 = np.transpose(np.load("data/arrayX3_1.npy"))
+    sample_4 = np.transpose(np.load("data/arrayX3_2.npy"))
 
     M_dif = M_1 - M_0
     M_dif_T = np.transpose(M_1 - M_0)
@@ -141,8 +141,8 @@ def task_1_different_B():
 
 
 def task_2_same_B():
-    sample_1 = np.load("Files/arrayX2_1.npy")
-    sample_2 = np.load("Files/arrayX2_2.npy")
+    sample_1 = np.load("data/arrayX2_1.npy")
+    sample_2 = np.load("data/arrayX2_2.npy")
     sample_1 = np.transpose(sample_1)
     sample_2 = np.transpose(sample_2)
 
@@ -170,8 +170,8 @@ def task_2_same_B():
 
 
 def task_2_different_B():
-    sample_3 = np.transpose(np.load("Files/arrayX3_1.npy"))
-    sample_4 = np.transpose(np.load("Files/arrayX3_2.npy"))
+    sample_3 = np.transpose(np.load("data/arrayX3_1.npy"))
+    sample_4 = np.transpose(np.load("data/arrayX3_2.npy"))
 
     M_dif = M_1 - M_0
     M_dif_T = np.transpose(M_1 - M_0)
@@ -242,8 +242,8 @@ def show_borders(W_arr, x, sample_1, sample_2):
     plt.show()
 
 def task_3_same_B():
-    sample_1 = np.load("Files/arrayX2_1.npy")
-    sample_2 = np.load("Files/arrayX2_2.npy")
+    sample_1 = np.load("data/arrayX2_1.npy")
+    sample_2 = np.load("data/arrayX2_2.npy")
     sample_1 = np.transpose(sample_1)
     sample_2 = np.transpose(sample_2)
 
@@ -304,8 +304,8 @@ def task_3_same_B():
 
 
 def task_3_different_B():
-    sample_3 = np.transpose(np.load("Files/arrayX3_1.npy"))
-    sample_4 = np.transpose(np.load("Files/arrayX3_2.npy"))
+    sample_3 = np.transpose(np.load("data/arrayX3_1.npy"))
+    sample_4 = np.transpose(np.load("data/arrayX3_2.npy"))
 
     class_0_size = np.shape(sample_3)
     class_1_size = np.shape(sample_4)
